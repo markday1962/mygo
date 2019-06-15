@@ -1,0 +1,5 @@
+enabled: true
+path: /usr/local
+#servers:
+#  - server1
+#  - server2
