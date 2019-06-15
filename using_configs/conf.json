@@ -1,5 +1,7 @@
 {
   "enabled": true,
   "path": "/usr/local",
-  "servers": ["server1", "server2"]
+  "servers": [
+    {"Name":  "server1", "ID":  "qwer"},
+    {"Name": "server2", "ID": "asdf"}]
 }

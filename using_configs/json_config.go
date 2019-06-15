@@ -1,4 +1,4 @@
-package using_configs
+package main
 
 import (
 	"encoding/json"
@@ -9,7 +9,12 @@ import (
 type configuration struct {
 	Enabled bool
 	Path    string
-	Servers []string
+	Servers []Server
+}
+
+type Server struct {
+	Name string
+	ID   string
 }
 
 func main() {
@@ -26,6 +31,6 @@ func main() {
 		fmt.Println(conf.Path)
 	}
 	for _, v := range conf.Servers {
-		fmt.Println(v)
+		fmt.Println(v.Name, ":", v.ID)
 	}
 }
