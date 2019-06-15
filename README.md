@@ -1,0 +1,2 @@
+# mygo
+My go utilities
