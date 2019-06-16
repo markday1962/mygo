@@ -24,6 +24,6 @@ func main() {
 	if err != nil {
 		fmt.Println("Json unmarshal error", err)
 	}
-	fmt.Println(p)
+	fmt.Println("Printing p:", p)
 	fmt.Println("Forename:", p.FirstName, ",Surname:", p.LastName, ",Age:", p.Age)
 }
