@@ -3,5 +3,6 @@
   "path": "/usr/local",
   "servers": [
     {"Name":  "server1", "ID":  "qwer"},
-    {"Name": "server2", "ID": "asdf"}]
+    {"Name": "server2", "ID": "asdf"}
+  ]
 }
