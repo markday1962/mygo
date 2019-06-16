@@ -46,12 +46,6 @@ func walkJSON(v interface{}) {
 		fmt.Println("is a string", vv)
 	case float64:
 		fmt.Println("is a float64", vv)
-	case []interface{}:
-		fmt.Println("is an array", vv)
-		for k, v := range vv {
-			fmt.Println(k, " ")
-			walkJSON(v)
-		}
 	case map[string]interface{}:
 		fmt.Println("is an object", vv)
 		for k, v := range vv {
