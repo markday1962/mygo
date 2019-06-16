@@ -6,15 +6,15 @@ import (
 )
 
 type Person struct {
-	First string `json:"first"`
-	Last  string `json:"last"`
-	Age   int    `json:"age"`
+	FirstName string `json:"firstName"`
+	LastName  string `json:"lastName"`
+	Age       int    `json:"age"`
 }
 
 //example of a json representation that is of type string
 var JSON = `{
-	"first": "Mark",
-	"last": "Day",
+	"firstName": "Mark",
+	"lastName": "Day",
 	"age": 57
 }`
 
@@ -25,5 +25,5 @@ func main() {
 		fmt.Println("Json unmarshal error", err)
 	}
 	fmt.Println(p)
-	fmt.Println("Forename:", p.First, ",Surname:", p.Last, ",Age:", p.Age)
+	fmt.Println("Forename:", p.FirstName, ",Surname:", p.LastName, ",Age:", p.Age)
 }
