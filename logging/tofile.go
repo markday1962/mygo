@@ -1,12 +1,16 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 )
 
 func main() {
-	logfile, _ := os.Create("./logfile.txt")
+	logfile, err := os.Create("/tmp/logfile.txt")
+	if err != nil {
+		fmt.Println("Error creating log file")
+	}
 	defer logfile.Close()
 
 	logger := log.New(logfile, "example ", log.LstdFlags|log.Lshortfile)
