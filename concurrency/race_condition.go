@@ -6,6 +6,10 @@ import (
 	"sync"
 )
 
+//
+// Creating a go routine race condition, where each of the 100 go routine
+// write and read to the variable counter
+//
 func main() {
 	counter := 0
 	const gs = 100
@@ -22,10 +26,10 @@ func main() {
 			counter = v
 			wg.Done()
 		}()
-		fmt.Println("GOroutine", runtime.NumGoroutine())
+		fmt.Println("Number of GOroutine running\t", runtime.NumGoroutine())
 	}
 	wg.Wait()
-	fmt.Println("GOroutine", runtime.NumGoroutine())
-	fmt.Println("counter", counter)
+	fmt.Println("Number of GOroutine running\t", runtime.NumGoroutine())
+	fmt.Println("counter", counter) //the number is different each run
 
 }
