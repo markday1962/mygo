@@ -7,7 +7,7 @@ import (
 
 func main() {
 	name := "www.aistemos.com"
-	r, err := exists(name)
+	r, err := canConnect(name)
 	if err != nil {
 		fmt.Println("Error received:", err)
 	}
@@ -15,7 +15,7 @@ func main() {
 	fmt.Printf("Connection Open for %v: %v",name, r)
 }
 
-func exists(name string) (bool, error){
+func canConnect(name string) (bool, error){
 	conn, err := net.Dial("tcp", name + ":80")
 	if err != nil {
 		return false, err
